@@ -12,6 +12,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
 
 /**
  *
@@ -83,6 +85,9 @@ public class HelloServlet extends HttpServlet {
         
         msg = msg+nome+"!";
 
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss dd/MM/yyyy");
+        LocalDateTime now = LocalDateTime.now();
+
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
@@ -94,7 +99,7 @@ public class HelloServlet extends HttpServlet {
             out.println("<body>");
             out.println("<h1>Servlet HelloServlet</h1>");
             out.println("<p>" + msg + "</p>");
-            out.println("<p>" + java.time.LocalDateTime.now() + "</p>");
+            out.println("<p>" + dtf.format(now) + "</p>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -147,6 +152,9 @@ public class HelloServlet extends HttpServlet {
         
         msg = msg+nome+"!";
 
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss dd/MM/yyyy");
+        LocalDateTime now = LocalDateTime.now();
+
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
@@ -158,7 +166,7 @@ public class HelloServlet extends HttpServlet {
             out.println("<body>");
             out.println("<h1>Servlet HelloServlet</h1>");
             out.println("<p>" + msg + "</p>");
-            out.println("<p>" + java.time.LocalDateTime.now() + "</p>");
+            out.println("<p>" + dtf.format(now) + "</p>");
             out.println("</body>");
             out.println("</html>");
         }

@@ -9,6 +9,8 @@ package hello;
 
 import java.beans.*;
 import java.io.Serializable;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
 
 /**
  *
@@ -25,6 +27,12 @@ public class MessageBean implements Serializable {
         return msg;
     }
     
+    public String getNow() {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss dd/MM/yyyy");
+        LocalDateTime now = LocalDateTime.now();
+        return dtf.format(now);
+    }
+
     public void setMsg(String value) {
         switch (value){
             case "":

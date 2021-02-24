@@ -19,6 +19,6 @@
         <jsp:setProperty name="myBean" property="msg" value="<%=lang%>"/>
         <jsp:getProperty name="myBean" property="msg"/>, <%=request.getParameter("nome")%>!
         <br>
-        <%=java.time.LocalDateTime.now()%>
+        <jsp:getProperty name="myBean" property="now"/>
     </body>
 </html>
