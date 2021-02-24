@@ -94,6 +94,7 @@ public class HelloServlet extends HttpServlet {
             out.println("<body>");
             out.println("<h1>Servlet HelloServlet</h1>");
             out.println("<p>" + msg + "</p>");
+            out.println("<p>" + java.time.LocalDateTime.now() + "</p>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -128,6 +129,15 @@ public class HelloServlet extends HttpServlet {
             case "de":
                 msg = "Hallo, ";
                 break;
+            case "es":
+                msg = "Hola, ";
+                break;
+            case "it":
+                msg = "Ciao, ";
+                break;
+            case "ja":
+                msg = "Kon'nichiwa, ";
+                break;
         }
         
         String nome = request.getParameter("nome");
@@ -148,6 +158,7 @@ public class HelloServlet extends HttpServlet {
             out.println("<body>");
             out.println("<h1>Servlet HelloServlet</h1>");
             out.println("<p>" + msg + "</p>");
+            out.println("<p>" + java.time.LocalDateTime.now() + "</p>");
             out.println("</body>");
             out.println("</html>");
         }
