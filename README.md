@@ -9,4 +9,8 @@ Atividade individual feita para a matéria de Desenvolvimento de Aplicações Co
 - Adição de novos idiomas (espanhol, italiano e japonês)
 - Retorno de data e hora ao finalizar o formulário
 # Deploy no Heroku
+<<<<<<< HEAD
 - https://mighty-falls-03881.herokuapp.com/
+=======
+- https://mighty-falls-03881.herokuapp.com/
+>>>>>>> 46f370701a64b1964b5c25b8e2f2f1e7ed4d0478
